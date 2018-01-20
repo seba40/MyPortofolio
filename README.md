@@ -5,7 +5,7 @@
   <img  src="https://i.imgur.com/N2T3S1H.png">
 </p>
 <h1 align="center">DESCRIPTION</h1>
-<p align="center">I decided to create a website where i can present my work and find informations about me and how you can get in touch. The website is made from scratch using HTML,CSS and JavaScript. In the future i will attach a database for informations about every piece of work because currently there is only a local database in the HTML code   </p>
+<p align="center">I decided to create a website where i can present my work and find informations about me and how you can get in touch. The website is made from scratch using HTML,CSS and JavaScript. In the future i will attach a MySQL database for informations about every piece of work because currently there is only a local database in the HTML code   </p>
 <h1 align="center">BUILT WITH</h1>
  <p align="center">  <a href="https://www.w3schools.com/html/html_intro.asp">HTML </a>- Self-explanatory</p>
  <p align="center" >  <a href="https://www.w3schools.com/css/">CSS </a>- For styling the website</p>
