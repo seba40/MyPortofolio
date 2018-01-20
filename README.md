@@ -11,7 +11,7 @@
  <p align="center" >  <a href="https://www.w3schools.com/css/">CSS </a>- For styling the website</p>
  <p align="center"> <a href="https://www.javascript.com/">JavaScript </a>- Scripting Language</p>
    <p align="center"> <a href="https://jquery.com/">jQuery </a>- Library for easier workflow</p>
-  <p align="center"><a href="http://www.pyinstaller.org/">Brackets </a>- Text Editor</p>
+  <p align="center"><a href="http://brackets.io/">Brackets </a>- Text Editor</p>
     <p align="center"><a href="http://www.adobe.com/ro/products/photoshop.html?promoid=GXWFR">Photoshop </a>- Image Editor for graphic elements</p>
 
 
