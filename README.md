@@ -1,11 +1,11 @@
 <h1 align="center">MyPortofolio</h1>
 
-<h3 align="center"> Website for my portofolio and informations about me</h3>
+<h3 align="center"> Website for my portofolio and information about me</h3>
 <p align="center">
   <img  src="https://i.imgur.com/N2T3S1H.png">
 </p>
 <h1 align="center">DESCRIPTION</h1>
-<p align="center">I decided to create a website for my portofolio where those interested can see my work, informations about me and how you can get in touch. The website is made from scratch using HTML,CSS and JavaScript. In the future i will attach a MySQL database for informations about every piece of work because currently there is only a local database in the HTML code   </p>
+<p align="center">I decided to create a website for my portofolio where those interested can see my work, information about me and how you can get in touch. The website is made from scratch using HTML,CSS and JavaScript. In the future i will attach a MySQL database for informations about every piece of work because currently there is only a local database in the HTML code   </p>
 <h1 align="center">BUILT WITH</h1>
  <p align="center">  <a href="https://www.w3schools.com/html/html_intro.asp">HTML </a>- Self-explanatory</p>
  <p align="center" >  <a href="https://www.w3schools.com/css/">CSS </a>- For styling the website</p>
