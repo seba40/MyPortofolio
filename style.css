@@ -1,5 +1,5 @@
 body {
-    background: url("Back.png") no-repeat center center;
+    background: url("") no-repeat center center;
     background-attachment: fixed;
     background-position: 53% 50%;
 }
@@ -38,7 +38,14 @@ h1 {
     text-align: center;
     position: relative;
     margin-bottom: 16px;
-    min-width: 340px;
+    width: 0;
+    height: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
 h2 {
@@ -49,7 +56,13 @@ h2 {
     font-weight: 100;
     text-align: center;
     position: relative;
-    min-width: 340px;
+    width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: block;
 }
 
 h3 {
@@ -96,7 +109,7 @@ ul {
 }
 
 hr {
-    width: 280px;
+    width: 0;
 }
 
 div.gallery {

@@ -25,7 +25,23 @@ function reverse(s) {
 $(document).ready(function () {
     "use strict";
     var data, i,
-        infolist;
+        infolist,
+        random = Math.floor((Math.random() * 3) + 1);
+    $('body').css('background', 'url("Back' + random + '.png") no-repeat center center');
+    $('body').css('background-attachment', 'fixed');
+    $('body').css('background-position', '53% 50%');
+
+    $("h1").animate({
+        width: '500px'
+    }, 1000);
+    $("hr").delay(400).animate({
+        width: '280px'
+    }, 800);
+    $("h2").delay(400).animate({
+        width: '500px'
+    }, 800);
+
+
     $('img.gallery').click(function () {
         var path = $(this).attr("src"),
             temp,
