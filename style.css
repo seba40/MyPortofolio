@@ -21,11 +21,9 @@ div.logo {
 }
 
 img.logo {
-    width: 340px;
-    height: 130px;
+    width: 430px;
     position: relative;
     display: block;
-    max-height: 100%;
     margin: auto;
     margin-bottom: 60px;
 }
@@ -38,13 +36,12 @@ h1 {
     text-align: center;
     position: relative;
     margin-bottom: 16px;
-    width: 0;
-    height: 70px;
+    width: 70%;
+    height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     overflow-x: hidden;
-    overflow-y: hidden;
     white-space: nowrap;
 }
 
@@ -56,7 +53,7 @@ h2 {
     font-weight: 100;
     text-align: center;
     position: relative;
-    width: 0;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     overflow-x: hidden;
@@ -98,8 +95,8 @@ a {
 
 ul {
     display: block;
-    max-width: 1050px;
-    min-width: 1050px;
+    max-width: 100%;
+    min-width: 400px;
     padding-left: 0;
     position: relative;
     margin-right: auto;
@@ -109,7 +106,7 @@ ul {
 }
 
 hr {
-    width: 0;
+    width: 280px;
 }
 
 div.gallery {
@@ -227,4 +224,27 @@ div.data {
 
 #menulogo {
     height: 25px;
+}
+
+@media only screen and (orientation: landscape) {
+    img.logo {
+        width: 430px;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    img.logo {
+        width: 90%;
+    }
+    h1 {
+        font-size: 65px;
+        white-space: normal;
+    }
+    h2 {
+        font-size: 35px;
+        white-space: normal;
+    }
+    hr{
+        width:50%;
+    }
 }

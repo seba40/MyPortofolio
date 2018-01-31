@@ -31,7 +31,7 @@ $(document).ready(function () {
     $('body').css('background-attachment', 'fixed');
     $('body').css('background-position', '53% 50%');
 
-    $("h1").animate({
+  /*  $("h1").animate({
         width: '500px'
     }, 1000);
     $("hr").delay(400).animate({
@@ -39,7 +39,7 @@ $(document).ready(function () {
     }, 800);
     $("h2").delay(400).animate({
         width: '500px'
-    }, 800);
+    }, 800);*/
 
 
     $('img.gallery').click(function () {
