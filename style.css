@@ -237,12 +237,14 @@ div.data {
         width: 90%;
     }
     h1 {
-        font-size: 65px;
+        font-size: 14vw;
         white-space: normal;
+        width:80%;
     }
     h2 {
-        font-size: 35px;
+        font-size: 7vw;
         white-space: normal;
+        width:80%;
     }
     hr{
         width:50%;
