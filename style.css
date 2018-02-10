@@ -3,6 +3,7 @@ body {
     background-attachment: fixed;
     background-position: 53% 50%;
 }
+html, body { height: 100%; width: 100%; margin: 0; }
 
 div.menu {
     position: absolute;
@@ -16,8 +17,11 @@ div.menu {
 
 div.logo {
     display: block;
-    margin-top: 290px;
     align-content: center;
+    height:50%;
+        top:25%;
+
+    position: relative;
 }
 
 img.logo {
@@ -234,19 +238,19 @@ div.data {
 
 @media only screen and (orientation: portrait) {
     img.logo {
-        width: 90%;
+        width: 70%;
     }
     h1 {
-        font-size: 14vw;
+        font-size: 11vw;
         white-space: normal;
-        width:80%;
+        width:60%;
     }
     h2 {
-        font-size: 7vw;
+        font-size: 6vw;
         white-space: normal;
-        width:80%;
+        width:70%;
     }
     hr{
-        width:50%;
+        width:30%;
     }
 }
