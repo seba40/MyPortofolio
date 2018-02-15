@@ -15,6 +15,13 @@ function off() {
 
 }
 
+function checkQuery(el, prop, val) {
+    if (el.css(prop) === val)
+        return 1;
+    else
+        return 0;
+}
+
 function reverse(s) {
     "use strict";
 
@@ -31,15 +38,22 @@ $(document).ready(function () {
     $('body').css('background-attachment', 'fixed');
     $('body').css('background-position', '53% 50%');
 
-  /*  $("h1").animate({
-        width: '500px'
-    }, 1000);
-    $("hr").delay(400).animate({
-        width: '280px'
-    }, 800);
-    $("h2").delay(400).animate({
-        width: '500px'
-    }, 800);*/
+    $('#menuButton').click(function () {
+        $("ul").css("display", "block");
+
+
+
+
+    });
+    /*  $("h1").animate({
+          width: '500px'
+      }, 1000);
+      $("hr").delay(400).animate({
+          width: '280px'
+      }, 800);
+      $("h2").delay(400).animate({
+          width: '500px'
+      }, 800);*/
 
 
     $('img.gallery').click(function () {
@@ -81,4 +95,16 @@ $(document).ready(function () {
 
 
 
+});
+$(window).resize(function () { // functie apelata in momentul cand fereastra se redimensioneaza
+    "use strict";
+    if ($(window).width() <= 720) {
+        $("ul").css("display", "none");
+
+
+
+    } else {
+        $("ul").css("display", "block");
+
+    }
 });

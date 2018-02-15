@@ -3,7 +3,13 @@ body {
     background-attachment: fixed;
     background-position: 53% 50%;
 }
-html, body { height: 100%; width: 100%; margin: 0; }
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
 
 div.menu {
     position: absolute;
@@ -18,9 +24,8 @@ div.menu {
 div.logo {
     display: block;
     align-content: center;
-    height:50%;
-        top:25%;
-
+    height: 50%;
+    top: 25%;
     position: relative;
 }
 
@@ -30,6 +35,13 @@ img.logo {
     display: block;
     margin: auto;
     margin-bottom: 60px;
+}
+
+#menuButton {
+    display: none;
+    width: 60px;
+    position: relative;
+    margin: auto;
 }
 
 h1 {
@@ -82,12 +94,13 @@ li {
     font-weight: 100;
     font-style: normal;
     text-decoration: none !important;
-    display: inline;
+    display: inline-block;
     text-align: center;
     position: relative;
     font-size: 25px;
-    margin-left:3%;
+    margin-left: 3%;
     margin-right: 3%;
+    background:transparent;
 }
 
 a {
@@ -229,27 +242,34 @@ div.data {
     height: 25px;
 }
 
-@media only screen and (orientation: landscape) {
-    img.logo {
-        width: 430px;
-    }
-}
-
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width:720px) {
     img.logo {
         width: 70%;
     }
     h1 {
         font-size: 11vw;
         white-space: normal;
-        width:60%;
+        width: 60%;
     }
     h2 {
         font-size: 6vw;
         white-space: normal;
-        width:70%;
+        width: 70%;
     }
-    hr{
-        width:30%;
+    hr {
+        width: 30%;
+    }
+    li {
+        display: block;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    ul {
+        display: none;
+        max-width: 40%;
+        top: -16px;
+        min-width: 200px;
+    }
+    #menuButton {
+        display: block;
     }
 }
