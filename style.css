@@ -122,8 +122,9 @@ ul.menu {
     text-align: center;
 }
 
-hr.menu {
+hr.logo {
     width: 0;
+    display: none;
 }
 
 div.gallery {
@@ -243,7 +244,7 @@ div.data {
     height: 25px;
 }
 div.name{
-    display: block;
+    display: none;
     width:0;
     position: relative;
     margin: auto;
@@ -283,6 +284,7 @@ div.line{
     div.name{
         height: auto;
         width: 60%;
+        display:block;
         
     }
     div.line{
@@ -290,6 +292,7 @@ div.line{
     }
     hr.logo {
         width: 30%;
+        display: block;
     }
     li.menu {
         display: block;
@@ -303,5 +306,8 @@ div.line{
     }
     #menuButton {
         display: block;
+    }
+    div.logo{
+        top:30%;
     }
 }

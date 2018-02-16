@@ -34,6 +34,7 @@ $(document).ready(function () {
     var data, i,
         infolist,
         random = Math.floor((Math.random() * 3) + 1);
+
     $('body').css('background', 'url("Back' + random + '.png") no-repeat center center');
     $('body').css('background-attachment', 'fixed');
     $('body').css('background-position', '53% 50%');
@@ -45,26 +46,47 @@ $(document).ready(function () {
 
 
     });
-    if (checkQuery("#menuButton", "display", "block") === 0) {
-        $("hr.logo").css("width","0");
+        $('body').imagesLoaded({
+        background: true
+    }, function () {
+               if (checkQuery("#menuButton", "display", "block") === 0) {
+        $("hr.logo").css("width", "0");
         $("h2.logo").css("width", "0");
-       $("div.line").delay(890).animate({
-            height:'0%',
-           top:'50%'
-            
-        },400);
+
+        $("img.logo").hide().delay(1000).fadeIn(1200);
+
+        $("div.line").delay(2400).animate({
+            height: '0%',
+            top: '50%'
+
+        }, 400);
+        $('div.name')
+            .delay(1500)
+            .queue(function (next) {
+                $(this).css('display', 'block');
+                next();
+            });
 
         $("div.name").animate({
             width: '500px'
         }, 1000);
+        $('hr.logo')
+            .delay(1900)
+            .queue(function (next) {
+                $(this).css('display', 'block');
+                next();
+            });
 
-        $("hr.logo").delay(400).animate({
+        $("hr.logo").animate({
             width: '280px'
         }, 800);
-        $("h2.logo").delay(400).animate({
+        $("h2.logo").delay(2200).animate({
             width: '500px'
         }, 800);
-    } 
+    }
+    });
+
+ 
 
     $('img.gallery').click(function () {
         var path = $(this).attr("src"),
@@ -110,28 +132,31 @@ $(window).resize(function () { // functie apelata in momentul cand fereastra se 
     "use strict";
     if ($(window).width() <= 720) {
         $("ul.menu").css("display", "none");
-        $("h1.logo").css("width","100%");
-        $("h2.logo").css("width","70%");
-        $("hr.logo").css("width","30%");
-        $("div.line").css("display","none");
-        $("div.name").css("width","60%");
-        $("div.name").css("height","auto");
-
-        
+        $("h1.logo").css("width", "100%");
+        $("h2.logo").css("width", "70%");
+        $("hr.logo").css("width", "30%");
+        $("div.line").css("display", "none");
+        $("div.name").css("width", "60%");
+        $("div.name").css("height", "auto");
 
 
-        
+
+
+
 
 
 
     } else {
         $("ul.menu").css("display", "block");
-        
-        $("h1.logo").css("width","100%");
-        $("h2.logo").css("width","500px");
-        $("hr.logo").css("width","280px");
-        $("div.name").css("width","500");
-        $("div.name").css("height","60px");
+
+        $("h1.logo").css("width", "100%");
+        $("h2.logo").css("width", "500px");
+        $("hr.logo").css("width", "280px");
+        $("div.name").css("width", "500");
+        $("div.name").css("height", "60px");
+        $("div.name").css("display","block");
+         $("hr.logo").css("display","block");
+       
 
     }
 });
