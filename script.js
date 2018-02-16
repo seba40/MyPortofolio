@@ -16,7 +16,7 @@ function off() {
 }
 
 function checkQuery(el, prop, val) {
-    if (el.css(prop) === val)
+    if ($(el).css(prop) === val)
         return 1;
     else
         return 0;
@@ -39,22 +39,32 @@ $(document).ready(function () {
     $('body').css('background-position', '53% 50%');
 
     $('#menuButton').click(function () {
-        $("ul").css("display", "block");
+        $("ul.menu").css("display", "block");
 
 
 
 
     });
-    /*  $("h1").animate({
-          width: '500px'
-      }, 1000);
-      $("hr").delay(400).animate({
-          width: '280px'
-      }, 800);
-      $("h2").delay(400).animate({
-          width: '500px'
-      }, 800);*/
+    if (checkQuery("#menuButton", "display", "block") === 0) {
+        $("hr.logo").css("width","0");
+        $("h2.logo").css("width", "0");
+       $("div.line").delay(890).animate({
+            height:'0%',
+           top:'50%'
+            
+        },400);
 
+        $("div.name").animate({
+            width: '500px'
+        }, 1000);
+
+        $("hr.logo").delay(400).animate({
+            width: '280px'
+        }, 800);
+        $("h2.logo").delay(400).animate({
+            width: '500px'
+        }, 800);
+    } 
 
     $('img.gallery').click(function () {
         var path = $(this).attr("src"),
@@ -99,12 +109,29 @@ $(document).ready(function () {
 $(window).resize(function () { // functie apelata in momentul cand fereastra se redimensioneaza
     "use strict";
     if ($(window).width() <= 720) {
-        $("ul").css("display", "none");
+        $("ul.menu").css("display", "none");
+        $("h1.logo").css("width","100%");
+        $("h2.logo").css("width","70%");
+        $("hr.logo").css("width","30%");
+        $("div.line").css("display","none");
+        $("div.name").css("width","60%");
+        $("div.name").css("height","auto");
+
+        
+
+
+        
 
 
 
     } else {
-        $("ul").css("display", "block");
+        $("ul.menu").css("display", "block");
+        
+        $("h1.logo").css("width","100%");
+        $("h2.logo").css("width","500px");
+        $("hr.logo").css("width","280px");
+        $("div.name").css("width","500");
+        $("div.name").css("height","60px");
 
     }
 });

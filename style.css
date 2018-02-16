@@ -44,24 +44,25 @@ img.logo {
     margin: auto;
 }
 
-h1 {
+h1.logo {
     font-family: Roboto;
     color: white;
     font-size: 50px;
     font-weight: 100;
     text-align: center;
-    position: relative;
-    margin-bottom: 16px;
-    width: 70%;
-    height: auto;
+    position: absolute;
+    top:0;
+    margin-top:0;
+    width: 99.8%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: hidden;
     white-space: nowrap;
+    height:100%;
+
 }
 
-h2 {
+h2.logo {
     font-family: Roboto;
     color: white;
     font-size: 27px;
@@ -69,7 +70,7 @@ h2 {
     font-weight: 100;
     text-align: center;
     position: relative;
-    width: 70%;
+    width: 0;
     margin-left: auto;
     margin-right: auto;
     overflow-x: hidden;
@@ -88,7 +89,7 @@ h3 {
     text-align: center;
 }
 
-li {
+li.menu {
     color: white;
     font-family: Roboto;
     font-weight: 100;
@@ -110,7 +111,7 @@ a {
     text-decoration: none !important;
 }
 
-ul {
+ul.menu {
     display: block;
     max-width: 100%;
     padding-left: 0;
@@ -121,8 +122,8 @@ ul {
     text-align: center;
 }
 
-hr {
-    width: 280px;
+hr.menu {
+    width: 0;
 }
 
 div.gallery {
@@ -241,29 +242,60 @@ div.data {
 #menulogo {
     height: 25px;
 }
+div.name{
+    display: block;
+    width:0;
+    position: relative;
+    margin: auto;
+    height: 60px;
+    margin-bottom: 20px;
+    
+
+}
+div.line{
+    border-right: 1px solid white;
+    display:block;
+    position:absolute;
+    width:99.6%;
+    height:100%;
+    top:0;
+    margin-top: 0;
+}
 
 @media only screen and (max-width:720px) {
     img.logo {
         width: 70%;
     }
-    h1 {
+
+    h1.logo {
         font-size: 11vw;
         white-space: normal;
-        width: 60%;
+        width: 100%;
+        display: block;
+        margin: auto;
+        position: relative;
     }
-    h2 {
+    h2.logo {
         font-size: 6vw;
         white-space: normal;
         width: 70%;
     }
-    hr {
+    div.name{
+        height: auto;
+        width: 60%;
+        
+    }
+    div.line{
+        display: none;
+    }
+    hr.logo {
         width: 30%;
     }
-    li {
+    li.menu {
         display: block;
         background: rgba(0, 0, 0, 0.5);
     }
-    ul {
+    ul.menu {
         display: none;
         max-width: 40%;
         top: -16px;
