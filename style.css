@@ -260,13 +260,18 @@ div.line{
 }
 p.warning{
     display:none;
-    position:relative;
-    top:200px;
+    position:absolute;
+    bottom:0;
     margin:auto;
+    width: 100%;
     text-align: center;
     color: white;
     font-family: roboto;
     font-weight: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top:10px;
+    padding-bottom: 10px;
+
 }
 @media only screen and (max-width:720px) {
     img.logo {
