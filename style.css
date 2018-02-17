@@ -259,7 +259,7 @@ div.line{
     margin-top: 0;
 }
 p.warning{
-    display:block;
+    display:none;
     position:relative;
     top:200px;
     margin:auto;
@@ -325,5 +325,8 @@ p.warning{
         width:50%;
         left:25%;
         display: block;
+    }
+    p.warning{
+        display:block;
     }
 }

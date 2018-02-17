@@ -99,6 +99,13 @@ $(document).ready(function () {
                 width: '500px'
             }, 800);
         }
+        $('p.warning')
+            .delay(2000)
+            .queue(function (next) {
+                $(this).css('display', 'block');
+                next();
+            });
+
     });
 
 
@@ -155,6 +162,7 @@ $(window).resize(function () { // functie apelata in momentul cand fereastra se 
         $("div.name").css("height", "auto");
         $("ul.menu").css("display", "none");
         $("a.navicon-button").removeClass("open");
+        $("p.warning").css("display", "block");
 
 
 
@@ -172,6 +180,7 @@ $(window).resize(function () { // functie apelata in momentul cand fereastra se 
         $("div.name").css("height", "60px");
         $("div.name").css("display", "block");
         $("hr.logo").css("display", "block");
+        $("p.warning").css("display", "block");
 
 
     }
