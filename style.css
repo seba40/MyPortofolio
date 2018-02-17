@@ -9,6 +9,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
+    top:0;
 }
 
 div.menu {
@@ -19,6 +20,7 @@ div.menu {
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 div.logo {
@@ -37,12 +39,6 @@ img.logo {
     margin-bottom: 60px;
 }
 
-#menuButton {
-    display: none;
-    width: 60px;
-    position: relative;
-    margin: auto;
-}
 
 h1.logo {
     font-family: Roboto;
@@ -319,5 +315,6 @@ div.line{
     div.menu{
         width:50%;
         left:25%;
+        display: block;
     }
 }

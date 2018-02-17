@@ -28,12 +28,159 @@
     <title>
         BOTEANU SEBASTIAN DESIGN & SOFTWARE
     </title>
+    <style>
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+        
+        @charset "UTF-8";
+        .navicon-button {
+            display: inline-block;
+            position: relative;
+            padding: 30px;
+            transition: 0.25s;
+            cursor: pointer;
+            user-select: none;
+            opacity: .8;
+        }
+        
+        .navicon-button .navicon:before,
+        .navicon-button .navicon:after {
+            transition: 0.25s;
+        }
+        
+        .navicon-button:hover {
+            transition: 0.5s;
+            opacity: 1;
+        }
+        
+        .navicon-button:hover .navicon:before,
+        .navicon-button:hover .navicon:after {
+            transition: 0.25s;
+        }
+        
+        .navicon-button:hover .navicon:before {
+            top: .825rem;
+        }
+        
+        .navicon-button:hover .navicon:after {
+            top: -.825rem;
+        }
+        
+        .navicon {
+            position: relative;
+            width: 2.5em;
+            height: .1125rem;
+            background: #FFF;
+            transition: 0.5s;
+        }
+        
+        .navicon:before,
+        .navicon:after {
+            display: block;
+            content: "";
+            height: .125rem;
+            width: 2.5rem;
+            background: #FFF;
+            position: absolute;
+            z-index: -1;
+            transition: 0.5s 0.25s;
+        }
+        
+        .navicon:before {
+            top: .625rem;
+        }
+        
+        .navicon:after {
+            top: -.625rem;
+        }
+        
+        .open:not(.steps) .navicon:before,
+        .open:not(.steps) .navicon:after {
+            top: 0 !important;
+        }
+        
+        .open .navicon:before,
+        .open .navicon:after {
+            transition: 0.5s;
+        }
+        /* × and + */
+        
+        .open.plus .navicon,
+        .open.x .navicon {
+            background: transparent;
+        }
+        
+        .open.plus .navicon:before,
+        .open.x .navicon:before {
+            transform: rotate(-45deg);
+        }
+        
+        .open.plus .navicon:after,
+        .open.x .navicon:after {
+            transform: rotate(45deg);
+        }
+        
+        .open.plus {
+            transform: scale(0.75) rotate(45deg);
+        }
+        
+        html,
+        body,
+        section {
+            position: relative;
+            height: 100%;
+
+        }
+        
+        section {
+            display: none;
+            width: 100px;
+            height: 60px;
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+    position: relative;
+    margin: auto;
+
+            /* Smoother animations */
+        }
+        
+        section *,
+        section *:before,
+        section *:after {
+            transform: translate3d(0, 0, 0);
+        }
+        
+        nav {
+            display: block;
+            justify-content: space-between;
+            height: 60px;
+            text-align: center;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+@media only screen and (max-width:720px) {
+    section{
+        display:block;
+    }
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
 
 <body>
     <div class="menu">
-        <img src="menu.png" id="menuButton">
+        <section>
+            <nav>
+
+                <a class="navicon-button x">
+                    <div class="navicon"></div>
+                </a>
+
+            </nav>
+        </section>
 
         <ul class="menu">
             <li class="menu"><a href="Design.html">DESIGN</a></li>

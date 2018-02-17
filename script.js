@@ -16,10 +16,12 @@ function off() {
 }
 
 function checkQuery(el, prop, val) {
-    if ($(el).css(prop) === val)
+    "use strict";
+    if ($(el).css(prop) === val) {
         return 1;
-    else
+    } else {
         return 0;
+    }
 }
 
 function reverse(s) {
@@ -33,34 +35,36 @@ $(document).ready(function () {
     "use strict";
     var data, i,
         infolist,
-        random = Math.floor((Math.random() * 3) + 1);
+        random = Math.floor((Math.random() * 3) + 1),
+        menuToggle = 0;
 
     $('body').css('background', 'url("Back' + random + '.png") no-repeat center center');
     $('body').css('background-attachment', 'fixed');
     $('body').css('background-position', '53% 50%');
 
-    $('#menuButton').click(function () {
-        if ($('#menuButton').attr("src") === "x.png") {
+    $("a.navicon-button").click(function () {
+        $(this).toggleClass("open");
+        if (menuToggle === 1) {
             $("ul.menu").css("display", "none");
-            $('#menuButton').attr("src", "menu.png");
-            $('#menuButton').css("width", "60px");
-            $('#menuButton').css("padding-top", "0px");
-            $('#menuButton').css("padding-bottom", "0px");
+            menuToggle = 0;
 
         } else {
             $("ul.menu").css("display", "block");
-            $('#menuButton').attr("src", "x.png");
-            $('#menuButton').css("width", "40px");
-            $('#menuButton').css("padding-top", "10px");
-            $('#menuButton').css("padding-bottom", "10px");
+            menuToggle = 1;
         }
 
-
     });
+
     $('body').imagesLoaded({
         background: true
     }, function () {
-        if (checkQuery("#menuButton", "display", "block") === 0) {
+        $('div.menu')
+            .delay(1100)
+            .queue(function (next) {
+                $(this).css('display', 'block');
+                next();
+            });
+        if (checkQuery("section", "display", "block") === 0) {
             $("hr.logo").css("width", "0");
             $("h2.logo").css("width", "0");
 
@@ -150,11 +154,7 @@ $(window).resize(function () { // functie apelata in momentul cand fereastra se 
         $("div.name").css("width", "60%");
         $("div.name").css("height", "auto");
         $("ul.menu").css("display", "none");
-        $('#menuButton').attr("src", "menu.png");
-        $('#menuButton').css("width", "60px");
-        $('#menuButton').css("padding-top", "0px");
-        $('#menuButton').css("padding-bottom", "0px");
-
+        $("a.navicon-button").removeClass("open");
 
 
 
