@@ -333,5 +333,7 @@ p.warning{
     }
     p.warning{
         display:block;
+        position:fixed;
+        
     }
 }
