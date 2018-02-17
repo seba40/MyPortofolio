@@ -180,7 +180,6 @@ $(window).resize(function () { // functie apelata in momentul cand fereastra se 
         $("div.name").css("height", "60px");
         $("div.name").css("display", "block");
         $("hr.logo").css("display", "block");
-        $("p.warning").css("display", "block");
 
 
     }
