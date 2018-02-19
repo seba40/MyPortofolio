@@ -1,6 +1,7 @@
 /*global $, jQuery, alert*/
 /*jslint plusplus: true */
 
+var menuToggle;
 
 function on() {
     "use strict";
@@ -36,8 +37,11 @@ $(document).ready(function () {
     var data, i,
         infolist,
         random = Math.floor((Math.random() * 3) + 1),
-        menuToggle = 0;
+        url = window.location.pathname,
+        filename = url.substring(url.lastIndexOf('/') + 1);
 
+
+    menuToggle = 0;
     $('body').css('background', 'url("Back' + random + '.png") no-repeat center center');
     $('body').css('background-attachment', 'fixed');
     $('body').css('background-position', '53% 50%');
@@ -54,61 +58,63 @@ $(document).ready(function () {
         }
 
     });
+    if (filename === "index.html") {
+        $('body').imagesLoaded({
+            background: true
+        }, function () {
+            $('div.menu')
+                .delay(1100)
+                .queue(function (next) {
+                    $(this).css('display', 'block');
+                    next();
+                });
+            if (checkQuery("section", "display", "block") === 0) {
+                $("hr.logo").css("width", "0");
+                $("h2.logo").css("width", "0");
 
-    $('body').imagesLoaded({
-        background: true
-    }, function () {
-        $('div.menu')
-            .delay(1100)
-            .queue(function (next) {
-                $(this).css('display', 'block');
-                next();
-            });
-        if (checkQuery("section", "display", "block") === 0) {
-            $("hr.logo").css("width", "0");
-            $("h2.logo").css("width", "0");
+                $("img.logo").hide().delay(1000).fadeIn(1200);
 
-            $("img.logo").hide().delay(1000).fadeIn(1200);
+                $("div.line").delay(2400).animate({
+                    height: '0%',
+                    top: '50%'
 
-            $("div.line").delay(2400).animate({
-                height: '0%',
-                top: '50%'
+                }, 400);
+                $('div.name')
+                    .delay(1500)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        next();
+                    });
 
-            }, 400);
-            $('div.name')
-                .delay(1500)
+                $("div.name").animate({
+                    width: '500px'
+                }, 1000);
+                $('hr.logo')
+                    .delay(1900)
+                    .queue(function (next) {
+                        $(this).css('display', 'block');
+                        next();
+                    });
+
+                $("hr.logo").animate({
+                    width: '280px'
+                }, 800);
+                $("h2.logo").delay(2200).animate({
+                    width: '500px'
+                }, 800);
+            }
+            $('p.warning')
+                .delay(2000)
                 .queue(function (next) {
                     $(this).css('display', 'block');
                     next();
                 });
 
-            $("div.name").animate({
-                width: '500px'
-            }, 1000);
-            $('hr.logo')
-                .delay(1900)
-                .queue(function (next) {
-                    $(this).css('display', 'block');
-                    next();
-                });
+        });
 
-            $("hr.logo").animate({
-                width: '280px'
-            }, 800);
-            $("h2.logo").delay(2200).animate({
-                width: '500px'
-            }, 800);
-        }
-        $('p.warning')
-            .delay(2000)
-            .queue(function (next) {
-                $(this).css('display', 'block');
-                next();
-            });
-
-    });
-
-
+    } else {
+        $("div.menu").css("display", "block");
+    }
 
     $('img.gallery').click(function () {
         var path = $(this).attr("src"),
@@ -152,35 +158,54 @@ $(document).ready(function () {
 });
 $(window).resize(function () { // functie apelata in momentul cand fereastra se redimensioneaza
     "use strict";
-    if ($(window).width() <= 720) {
-        $("ul.menu").css("display", "none");
-        $("h1.logo").css("width", "100%");
-        $("h2.logo").css("width", "70%");
-        $("hr.logo").css("width", "30%");
-        $("div.line").css("display", "none");
-        $("div.name").css("width", "60%");
-        $("div.name").css("height", "auto");
-        $("ul.menu").css("display", "none");
-        $("a.navicon-button").removeClass("open");
-        $("p.warning").css("display", "block");
+    var url = window.location.pathname,
+        filename = url.substring(url.lastIndexOf('/') + 1);
+
+
+    if (filename === "index.html") {
+
+        if ($(window).width() <= 720) {
+            $("ul.menu").css("display", "none");
+            $("h1.logo").css("width", "100%");
+            $("h2.logo").css("width", "70%");
+            $("hr.logo").css("width", "30%");
+            $("div.line").css("display", "none");
+            $("div.name").css("width", "60%");
+            $("div.name").css("height", "auto");
+            $("ul.menu").css("display", "none");
+            $("p.warning").css("display", "block");
+            $("a.navicon-button").removeClass("open");
+            menuToggle = 0;
 
 
 
 
 
 
+        } else {
+            $("ul.menu").css("display", "block");
+
+            $("h1.logo").css("width", "100%");
+            $("h2.logo").css("width", "500px");
+            $("hr.logo").css("width", "280px");
+            $("div.name").css("width", "500");
+            $("div.name").css("height", "60px");
+            $("div.name").css("display", "block");
+            $("hr.logo").css("display", "block");
+        }
 
     } else {
-        $("ul.menu").css("display", "block");
+        if (checkQuery("section", "display", "block") === 0) {
+            $("ul.menu").css("display", "block");
 
-        $("h1.logo").css("width", "100%");
-        $("h2.logo").css("width", "500px");
-        $("hr.logo").css("width", "280px");
-        $("div.name").css("width", "500");
-        $("div.name").css("height", "60px");
-        $("div.name").css("display", "block");
-        $("hr.logo").css("display", "block");
+        } else {
+            $("ul.menu").css("display", "none");
+            menuToggle = 0;
+            $("a.navicon-button").removeClass("open");
 
 
+
+
+        }
     }
 });

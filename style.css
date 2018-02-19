@@ -10,6 +10,7 @@ body {
     width: 100%;
     margin: 0;
     top:0;
+
 }
 
 div.menu {
@@ -129,17 +130,14 @@ div.gallery {
     margin: auto;
     margin-top: 140px;
     display: block;
-    max-width: 1500px;
-    min-width: 300px;
+    width:90%;
 }
 
 img.gallery {
     width: 400px;
     position: relative;
     display: inline-block;
-    margin: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 10px;
     cursor: pointer;
 }
 
@@ -335,5 +333,14 @@ p.warning{
         display:block;
         position:fixed;
         
+    }
+    img.gallery{
+        width:90%;margin:auto;
+        margin-top:15px;
+        margin-bottom: 15px;
+        
+    }
+    legend{
+        font-size: 6vw;
     }
 }
