@@ -58,7 +58,7 @@ $(document).ready(function () {
         }
 
     });
-    if (filename === "index.html") {
+    if (filename === "index.html" || filename === "") {
         $('body').imagesLoaded({
             background: true
         }, function () {
@@ -162,7 +162,7 @@ $(window).resize(function () { // functie apelata in momentul cand fereastra se 
         filename = url.substring(url.lastIndexOf('/') + 1);
 
 
-    if (filename === "index.html") {
+    if (filename === "index.html" || filename === "") {
 
         if ($(window).width() <= 720) {
             $("ul.menu").css("display", "none");
