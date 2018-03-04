@@ -36,7 +36,7 @@ $(document).ready(function () {
     "use strict";
     var data, i,
         infolist,
-        random = Math.floor((Math.random() * 3) + 1),
+        random = Math.floor((Math.random() * 6) + 1),
         url = window.location.pathname,
         filename = url.substring(url.lastIndexOf('/') + 1);
 
@@ -128,6 +128,7 @@ $(document).ready(function () {
 
         temp = $('p.' + path.substring(0, path.indexOf('.'))).text().split(" "); //getData
         tempinfo = $('p.infotype\\/' + path.substring(0, 1)).text().split(" ");
+
         $('p.info').text(temp[0]); //set title
         $('p.info').text($('p.info').text().replace(/\_/g, " ")); //remove '_'
         lenght = Object.keys(tempinfo).length;
