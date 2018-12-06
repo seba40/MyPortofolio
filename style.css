@@ -271,6 +271,34 @@ p.warning{
     padding-bottom: 10px;
 
 }
+div.about{
+    width: 70%;
+    position: relative;
+    display: block;
+    margin: auto;
+    top:100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 90%;
+}
+div.about img{
+    width:25%;
+    display: block;
+    position: relative;
+    margin: auto;
+    top:5%;
+}
+div.about h1{
+    color: white;
+    font-family: Roboto;
+    font-weight: 100;
+    font-style: normal;
+    display: block;
+    text-align: center;
+    position: relative;
+    font-size: 3.7vw;
+    top:6%;
+
+}
 @media only screen and (max-width:720px) {
     img.logo {
         width: 70%;

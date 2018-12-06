@@ -42,10 +42,15 @@ $(document).ready(function () {
 
 
     menuToggle = 0;
-    $('body').css('background', 'url("Back' + random + '.png") no-repeat center center');
-    $('body').css('background-attachment', 'fixed');
-    $('body').css('background-position', '53% 50%');
-
+    if (filename === "about.html") {
+        $('body').css('background', 'url("Back4.png") no-repeat center center');
+        $('body').css('background-attachment', 'fixed');
+        $('body').css('background-position', '53% 50%');
+    } else {
+        $('body').css('background', 'url("Back' + random + '.png") no-repeat center center');
+        $('body').css('background-attachment', 'fixed');
+        $('body').css('background-position', '53% 50%');
+    }
     $("a.navicon-button").click(function () {
         $(this).toggleClass("open");
         if (menuToggle === 1) {
